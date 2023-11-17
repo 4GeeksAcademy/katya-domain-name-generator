@@ -15,7 +15,9 @@ window.onload = function() {
     for (let x = 0; x < adj.length; x++) {
       for (let j = 0; j < noun.length; j++) {
         for (let y = 0; y < domain.length; y++) {
-          console.log(`${pronoun[i]}${adj[x]}${noun[j]}${domain[y]}`);
+          let list = document.createElement("li");
+          list.innerText = `${pronoun[i]}${adj[x]}${noun[j]}${domain[y]}`;
+          document.querySelector("#domains").appendChild(list);
         }
       }
     }
